@@ -214,7 +214,7 @@ if (config.svg.rootAttributes) {
 
 // Expand transformation options
 var transform = ('' + config.shape.transform).trim();
-config.shape.transform = [];
+config.shape.transform = config.shape.transform || [];
 (transform.length ? transform.split(',').map(function (trans) {
 	return ('' + trans).trim();
 }) : []).forEach(function (transform) {
